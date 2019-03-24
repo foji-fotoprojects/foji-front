@@ -19,6 +19,7 @@ class Layout extends React.Component {
 
             <footer className="card-footer">
                 <div className="container">
+                    <div className="rights-mobile">© Все права защищены</div>
                     <Layout__Menu>
                         <Layout__MenuItem href="/" active={isActive('/')}>
                             Фотопроекты
@@ -46,20 +47,23 @@ class Layout extends React.Component {
                             для организаторов
                         </Layout__MenuItem>
                     </Layout__Menu>
-                    <div className="socials menu">
-                        <div className="socials-title">
+                    <div className="footer-socials menu">
+                        <div className="footer-socials-title">
                             Мы в соцсетях
                         </div>
-                        <div className="socials-logo">
+                        <div className="footer-socials-logo">
                             <a className={'vk'} href="https://vk.com">
                                 <ReactSVG  src="./images/vk.svg" alt=""/>
 
                             </a>
                             <a className={'inst'} href="https://www.instagram.com">
                                 <ReactSVG  src="./images/inst.svg" alt=""/>
-
                             </a>
                         </div>
+                    </div>
+                    <div className={"telephone-and-rights"}>
+                        <a className={'telephone'} href="tel:+79876543221"> +7 (987) 654-32-21</a>
+                        <div className="rights-desktop">© Все права защищены</div>
                     </div>
                 </div>
             </footer>

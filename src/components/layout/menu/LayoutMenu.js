@@ -6,8 +6,8 @@ import {Link} from 'react-router';
 class Menu extends React.Component {
     render() {
         return (
-                <nav className="navbar">
-                        <ul className="menu">
+                <nav className={this.props.isMenuOpen ? "navbar menu-open": "navbar" }>
+                        <ul className={"menu"}>
                             {this.props.children}
                         </ul>
                 </nav>

@@ -1,4 +1,47 @@
-main {
+main.project {
   background: aqua;
   padding-top: 70px;
+}
+main.project .container a.project__link-back {
+  display: block;
+  margin: 20px 0;
+  width: fit-content;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 21px;
+  color: rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+}
+main.project .container a.project__link-back:hover {
+  color: black;
+}
+main.project .container .project__tags {
+  display: flex;
+  align-items: center;
+}
+main.project .container .project__tag {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 13px;
+  color: #FF4546;
+}
+main.project .container .project__tag:not(:last-child)::after {
+  content: '';
+  display: inline-block;
+  margin: 3px 6px;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: rgba(255, 69, 70, 0.8);
+}
+main.project .container .project__head {
+  height: 45px;
+}
+main.project .container .project__title {
+  float: left;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: normal;
 }
