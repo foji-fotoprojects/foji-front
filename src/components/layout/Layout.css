@@ -1,0 +1,83 @@
+@font-face {
+  font-family: Roboto;
+  src: url(../../fonts/roboto/Roboto-Regular.ttf);
+  
+  /* Гарнитура шрифта */
+  /* Путь к файлу со шрифтом */
+}
+body {
+  min-height: 100vh;
+  position: relative;
+  font-family: Roboto Condensed, sans-serif;
+}
+.container {
+  width: 100%;
+  max-width: 1100px;
+  height: 100%;
+  margin: 0 auto;
+}
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  min-height: 138px;
+  background: #ECECEC;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.7);
+}
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+footer nav {
+  margin: 0;
+  max-width: 240px;
+}
+footer .menu {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  list-style-type: none;
+  justify-content: flex-start;
+  padding: 27px 0 0;
+}
+footer .menu li {
+  height: fit-content;
+  width: fit-content;
+}
+footer .menu li a {
+  display: block;
+  height: fit-content;
+  width: fit-content;
+  padding: 2px 0;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.7);
+}
+footer .menu li a:hover {
+  font-weight: normal;
+  color: #000000;
+}
+footer .socials {
+  width: fit-content;
+}
+footer .socials .socials-logo {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 10px;
+}
+footer .socials .socials-logo a {
+  display: block;
+  width: fit-content;
+  margin: 0 4px;
+}
+footer .socials .socials-logo .vk {
+  padding-top: 1px;
+}
+footer .socials .socials-logo div {
+  width: fit-content;
+}
