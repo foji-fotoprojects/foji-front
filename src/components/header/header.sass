@@ -1,0 +1,59 @@
+header
+  width: 100%
+  font-size: 18px
+  .link
+    display: flex
+    align-items: center
+    height: 100%
+    font-size: 18px
+    //&:hover
+    //  box-shadow: inset 0 -4px 0 0 #000000
+
+.content
+  display: flex
+  justify-content: space-between
+  align-items: center
+  height: 73px
+
+.menu
+  display: flex
+  justify-content: space-between
+  align-items: center
+  min-width: 480px
+  height: 100%
+
+.header_main
+  border-bottom: none
+  background-color: #eeeeee
+  color: #fff
+  .link
+    color: #fff
+
+.header_noMain
+  border-bottom: 1px solid rgba(0, 0, 0, 0.7)
+  font-weight: 300
+  color: rgba(0, 0, 0, 0.7)
+  .link
+    color: rgba(0, 0, 0, 0.7)
+    &:hover
+      color: #000
+      text-shadow: 0.5px 0 0 #000
+      
+@media (max-width: 759px)
+  .content
+    height: 50px
+  .menu
+    position: absolute
+    top: 51px
+    left: 0
+    display: block
+    min-width: 100%
+    height: calc(100% - 51px)
+    padding-top: 40px
+    padding-left: 15px
+    background-color: #fff
+    z-index: 100
+    .link
+      display: block
+      height: 20px
+      margin-bottom: 24px

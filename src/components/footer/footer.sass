@@ -1,0 +1,61 @@
+.footer
+  flex: 0 0 auto
+  padding: 30px 0
+  background-color: #ececec
+
+.content
+  display: flex
+  justify-content: space-between
+  align-items: center
+  height: 100%
+
+.menu
+  display: flex
+  flex-direction: column
+  max-width: 215px
+
+.link
+  margin-bottom: 5px
+  line-height: 13px
+  &:hover
+    text-shadow: 0.5px 0 0 #000
+  &:last-child
+    margin-bottom: 0
+
+.copyright
+  display: none
+
+@media (max-width: 759px)
+  .footer
+    padding: 15px 0
+
+  .content
+    flex-direction: column
+
+  .menu
+    align-items: center
+
+  .link
+    text-align: center
+    &:last-child
+      margin-bottom: 4px
+
+  .copyright
+    display: block
+    order: 5
+
+  .mainMenu
+    order: 4
+    margin-bottom: 15px
+
+  .conditionsMenu
+    order: 3
+    margin-bottom: 12px
+
+  .socialMenu
+    order: 2
+    margin-bottom: 15px
+
+  .contactsMenu
+    order: 1
+    margin-bottom: 15px
