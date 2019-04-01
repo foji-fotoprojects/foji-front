@@ -1,0 +1,12 @@
+{
+  "apiKey": null,
+  "server": {
+    "host": "http://api.foji.ru",
+    "port": null
+  },
+  "db":{
+    "name": null,
+    "host": null,
+    "port": null
+  }
+}
