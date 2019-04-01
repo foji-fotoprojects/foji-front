@@ -1,29 +1,39 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import {connect} from "react-redux";
+
+import {fetchProjects} from "../../redux/actions/projectActions";
 
 import ProjectCard from "./projectСard/ProjectCard";
 
-export default class Projects extends React.Component {
+class Projects extends React.Component {
+    constructor(props) {
+        super(props);
+        this.props.dispatch(fetchProjects());
+    }
+
     render() {
         return (
             <div>
-                <Link to="/project">
-                    <ProjectCard/>
-                </Link>
-                <Link to="/project">
-                    <ProjectCard/>
-                </Link>
-                <Link to="/project">
-                    <ProjectCard/>
-                </Link>
-                <Link to="/project">
-                    <ProjectCard/>
-                </Link>
-                {/*Это то, что будет выводиться на главной странице*/}
-                {/*Если это страница "Фотороекты", то выводим текущие проекты*/}
-                {/*Если это страница "Прошедшие", то выводим прошедшие проекты*/}
-                {/*Выводим через map()*/}
+                {
+                    this.props.projects.map((project, index) => {
+                        return (
+                            <Link to="/project" key={index}>
+                                <ProjectCard title={project.name}/>
+                            </Link>
+                        )
+                    })
+                }
             </div>
         );
     }
 }
+
+function mapStateToProps(store) {
+    return {
+        projects: store.projects.projects,
+        is_fetching: store.projects.is_fetching
+    };
+}
+
+export default connect(mapStateToProps)(Projects);
