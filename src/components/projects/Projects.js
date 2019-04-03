@@ -5,6 +5,7 @@ import {connect} from "react-redux";
 import {fetchProjects} from "../../redux/actions/projectActions";
 
 import ProjectCard from "./projectСard/ProjectCard";
+import LoadingIcon from "../icons/loadingIcon/LoadingIcon";
 
 class Projects extends React.Component {
     constructor(props) {
@@ -15,15 +16,13 @@ class Projects extends React.Component {
     render() {
         return (
             <div>
-                {
-                    this.props.projects.map((project, index) => {
-                        return (
-                            <Link to="/project" key={index}>
-                                <ProjectCard title={project.name}/>
-                            </Link>
-                        )
-                    })
-                }
+                {this.props.is_fetching ? <LoadingIcon/> : this.props.projects.map((project, index) => {
+                    return (
+                        <Link to={`/project/${project.id}`} key={index}>
+                            <ProjectCard title={project.name}/>
+                        </Link>
+                    )
+                })}
             </div>
         );
     }

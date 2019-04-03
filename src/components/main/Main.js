@@ -22,7 +22,7 @@ export default class Main extends React.Component {
                 <Route path="/personaldataprocessing" component={PersonalDataProcessing} />
                 <Route path="/termsofserviceuse" component={TermsOfServiceUse} />
                 <Route path="/termofserviceusefororganizers" component={TermOfServiceUseForOrganizers} />
-                <Route path="/project" component={Project} />
+                <Route path="/project/:id" component={Project} />
             </main>
         );
     }
