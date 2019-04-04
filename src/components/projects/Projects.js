@@ -7,6 +7,16 @@ import ProjectCard from "./projectСard/ProjectCard";
 import LoadingIcon from "../icons/loadingIcon/LoadingIcon";
 
 import styles from './projects.sass';
+import Slider4blocks from "../slider/Slider4blocks";
+
+
+const slides = [
+    require('../../test_images/32064b1aac54770337ec95ea346e2db2.jpg'),
+    require('../../test_images/3146278.jpg'),
+    require('../../test_images/IMG_5762_web-1024x684.jpg'),
+    require('../../test_images/s1200.webp')
+];
+
 
 class Projects extends React.Component {
     constructor(props) {
@@ -17,7 +27,9 @@ class Projects extends React.Component {
     render() {
         return (
             <Fragment>
-                {/*Тут будет слайдер*/}
+                <div className="main__slider-container">
+                    <Slider4blocks slides={slides}/>
+                </div>
                 <div className={`container ${styles.container}`}>
                     {this.props.is_fetching ? <LoadingIcon/> : this.props.projects.map((project, index) => {
                         return (
