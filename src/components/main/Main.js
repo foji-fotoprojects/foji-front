@@ -3,6 +3,7 @@ import {Route} from 'react-router-dom'
 
 import Projects from '../projects/Projects';
 import Project from "../project/Project";
+import ErrorPage from "../staticPages/errorPage/ErrorPage";
 import About from '../staticPages/about/About';
 import Contacts from '../staticPages/contacts/Contacts';
 import PersonalDataProcessing from "../staticPages/personalDataProcessing/PersonalDataProcessing";
@@ -17,12 +18,12 @@ export default class Main extends React.Component {
             <main className='main'>
                 <Route exact path="/" component={Projects} />
                 <Route exact path="/past" component={Projects} />
-                <Route path="/contacts" component={Contacts} />
-                <Route path="/about" component={About} />
-                <Route path="/personaldataprocessing" component={PersonalDataProcessing} />
-                <Route path="/termsofserviceuse" component={TermsOfServiceUse} />
-                <Route path="/termofserviceusefororganizers" component={TermOfServiceUseForOrganizers} />
-                <Route path="/project/:id" component={Project} />
+                <Route exact path="/contacts" component={Contacts} />
+                <Route exact path="/about" component={About} />
+                <Route exact path="/personaldataprocessing" component={PersonalDataProcessing} />
+                <Route exact path="/termsofserviceuse" component={TermsOfServiceUse} />
+                <Route exact path="/termofserviceusefororganizers" component={TermOfServiceUseForOrganizers} />
+                <Route exact path="/project/:id" component={Project} />
             </main>
         );
     }
