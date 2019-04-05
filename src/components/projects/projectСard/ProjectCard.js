@@ -5,6 +5,8 @@ import Calendar from "../../icons/calendar/Calendar";
 import Clock from "../../icons/clock/Clock";
 import Photo from "../../icons/photo/Photo";
 import TimeInterval from "../../icons/timeInterval/TimeInterval";
+import RedButton from "../../buttons/redButton/RedButton";
+import TransparentButton from "../../buttons/transparentButton/TransparentButton";
 
 import styles from './projectCard.sass'
 
@@ -81,6 +83,11 @@ export default class ProjectCard extends React.Component {
                             {this.props.price} р.
                         </div>
                     </div>
+                </div>
+
+                <div className={styles.buttons}>
+                    <TransparentButton text={`Подробнее`}/>
+                    <RedButton text={`Записаться`}/>
                 </div>
             </article>
         );

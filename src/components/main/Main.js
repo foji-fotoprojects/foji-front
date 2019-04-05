@@ -4,7 +4,6 @@ import {Route} from 'react-router-dom'
 import Projects from '../projects/Projects';
 import Project from "../project/Project";
 import Past from "../past/Past";
-import ErrorPage from "../staticPages/errorPage/ErrorPage";
 import About from '../staticPages/about/About';
 import Contacts from '../staticPages/contacts/Contacts';
 import PersonalDataProcessing from "../staticPages/personalDataProcessing/PersonalDataProcessing";

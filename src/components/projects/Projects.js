@@ -44,6 +44,7 @@ class Projects extends React.Component {
                                          qtyPhotos={project.qty_photos}
                                          duration={project.duration}
                                          price={project.price}
+                                         key={index}
                             />
                         )
                     })}

@@ -12,7 +12,6 @@ export default class Layout extends React.Component {
         isMainPage: true,
         isMobile: 0,
         isActive: window.location.pathname,
-        heightSlider: 100,
         links: [
             {
                 id: 1,
