@@ -3,6 +3,7 @@ import {Route} from 'react-router-dom'
 
 import Projects from '../projects/Projects';
 import Project from "../project/Project";
+import Past from "../past/Past";
 import ErrorPage from "../staticPages/errorPage/ErrorPage";
 import About from '../staticPages/about/About';
 import Contacts from '../staticPages/contacts/Contacts';
@@ -16,8 +17,8 @@ export default class Main extends React.Component {
     render() {
         return (
             <main className='main'>
-                <Route exact path="/" component={Projects} />
-                <Route exact path="/past" component={Projects} />
+                <Route exact path="/" component={Projects}/>
+                <Route exact path="/past" component={Past} />
                 <Route exact path="/contacts" component={Contacts} />
                 <Route exact path="/about" component={About} />
                 <Route exact path="/personaldataprocessing" component={PersonalDataProcessing} />

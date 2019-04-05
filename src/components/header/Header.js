@@ -20,6 +20,8 @@ export default class Header extends React.Component {
         }));
     };
 
+
+
     render() {
         const menu = <Menu style={styles.menu} isMainPage={this.props.isMainPage} isHeader>
             {

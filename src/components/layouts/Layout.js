@@ -8,9 +8,11 @@ import styles from './layout.sass';
 
 export default class Layout extends React.Component {
     state = {
-        isMainPage: false,
+        mainPage: '/',
+        isMainPage: true,
         isMobile: 0,
         isActive: window.location.pathname,
+        heightSlider: 100,
         links: [
             {
                 id: 1,
@@ -43,9 +45,24 @@ export default class Layout extends React.Component {
         isMobile: window.innerWidth
     });
 
+    scrollPage = (position) => this.setState({
+        isMainPage: position
+    });
+
+    heightSlider = () => {
+        return (document.getElementById('slider').offsetHeight);
+    };
+
     componentDidMount() {
         this.handleResize();
-        window.addEventListener('resize', this.handleResize)
+        window.addEventListener('resize', this.handleResize);
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > this.heightSlider()) {
+                this.scrollPage(false)
+            } else {
+                this.scrollPage(true)
+            }
+        });
     }
 
     componentWillUnmount() {
@@ -64,7 +81,7 @@ export default class Layout extends React.Component {
         return (
             <div className={styles.wrapper}>
                 <div className={styles.content}>
-                    <Header isMainPage={this.state.isMainPage} isMobile={this.state.isMobile < 760} links={this.state.links}
+                    <Header isMainPage={(window.location.pathname === this.state.mainPage) && this.state.isMainPage} isMobile={this.state.isMobile < 760} links={this.state.links}
                             isActive={this.isActive} toggleActive={this.toggleActive}/>
                     <Main/>
                 </div>

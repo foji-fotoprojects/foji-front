@@ -18,7 +18,7 @@ export default class Slider4blocks extends React.Component {
     };
 
     render() {
-        return <div className={cx("slider")}>
+        return <div id='slider' className={cx("slider")}>
 
             <div className={cx("slider__panel slider__panel_current")}
                  key={this.state.page}
