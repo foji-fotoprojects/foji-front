@@ -33,7 +33,8 @@ class Projects extends React.Component {
                 <div className={`container ${styles.container}`}>
                     {this.props.is_fetching ? <LoadingIcon/> : this.props.projects.map((project, index) => {
                         return (
-                            <ProjectCard name={project.name}
+                            <ProjectCard id={project.id}
+                                         name={project.name}
                                          theme={project.theme}
                                          location={project.location}
                                          dateStart={project.date_start}

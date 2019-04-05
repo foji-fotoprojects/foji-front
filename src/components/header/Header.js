@@ -20,7 +20,10 @@ export default class Header extends React.Component {
         }));
     };
 
-
+    onClick = () => {
+        this.props.toggleActive();
+        this.props.scrollPage(true);
+    };
 
     render() {
         const menu = <Menu style={styles.menu} isMainPage={this.props.isMainPage} isHeader>
@@ -30,6 +33,7 @@ export default class Header extends React.Component {
                         <MenuItem style={styles.link} link={link.link} name={link.name}
                                   fullName={link.fullName} isMainPage={this.props.isMainPage} key={index}
                                   isMobile={this.props.isMobile} toggleActive={this.props.toggleActive}
+                                  scrollPage={this.props.scrollPage}
                                   isActive={this.props.isActive(link.link)} toggleVisible={this.toggleVisible}
                                   isHeader/>
                     )
@@ -41,7 +45,7 @@ export default class Header extends React.Component {
             <header className={this.props.isMainPage ? styles.header_main : styles.header_noMain}>
                 <div className={`container ${styles.content}`}>
                     <BurgerMenu toggleVisible={this.toggleVisible} mainPage={this.props.isMainPage}/>
-                    <Link onClick={this.props.toggleActive} className={styles.link} to={'/'}>
+                    <Link onClick={this.onClick} className={styles.link} to={'/'}>
                         <Logo isMainPage={this.props.isMainPage}/>
                     </Link>
                     {this.props.isMobile ? (this.state.isVisible && menu) : menu}

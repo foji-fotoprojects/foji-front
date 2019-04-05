@@ -49,23 +49,27 @@ export default class Layout extends React.Component {
     });
 
     heightSlider = () => {
-        return (document.getElementById('slider').offsetHeight);
+        if (document.getElementById('slider')) {
+            return (document.getElementById('slider').offsetHeight)
+        }
+        return null;
     };
 
     componentDidMount() {
         this.handleResize();
         window.addEventListener('resize', this.handleResize);
         window.addEventListener('scroll', () => {
-            if (window.pageYOffset > this.heightSlider()) {
+            if (window.pageYOffset >= this.heightSlider()) {
                 this.scrollPage(false)
             } else {
                 this.scrollPage(true)
             }
         });
+
     }
 
     componentWillUnmount() {
-        window.removeEventListener('resize', this.handleResize)
+        window.removeEventListener('resize', this.handleResize);
     }
 
     toggleActive = () => this.setState({
@@ -81,7 +85,7 @@ export default class Layout extends React.Component {
             <div className={styles.wrapper}>
                 <div className={styles.content}>
                     <Header isMainPage={(window.location.pathname === this.state.mainPage) && this.state.isMainPage} isMobile={this.state.isMobile < 760} links={this.state.links}
-                            isActive={this.isActive} toggleActive={this.toggleActive}/>
+                            isActive={this.isActive} toggleActive={this.toggleActive} scrollPage={this.scrollPage}/>
                     <Main/>
                 </div>
                 <Footer links={this.state.links} toggleActive={this.toggleActive}/>

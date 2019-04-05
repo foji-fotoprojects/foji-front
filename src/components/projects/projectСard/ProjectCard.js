@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from "react-router-dom";
 
 import Location from "../../icons/location/Location";
 import Calendar from "../../icons/calendar/Calendar";
@@ -86,7 +87,9 @@ export default class ProjectCard extends React.Component {
                 </div>
 
                 <div className={styles.buttons}>
-                    <TransparentButton text={`Подробнее`}/>
+                    <Link to={`/project/${this.props.id}`}>
+                        <TransparentButton text={`Подробнее`}/>
+                    </Link>
                     <RedButton text={`Записаться`}/>
                 </div>
             </article>

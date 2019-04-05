@@ -7,7 +7,8 @@ export default class Menu extends React.Component {
 
     onClick = () => {
         this.props.toggleActive();
-        this.props.isMobile && this.props.toggleVisible()
+        this.props.isMobile && this.props.toggleVisible();
+        this.props.scrollPage(true)
     };
 
     render() {
