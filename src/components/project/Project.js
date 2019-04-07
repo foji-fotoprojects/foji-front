@@ -13,7 +13,7 @@ class Project extends React.Component {
 
     render() {
         return (
-            <p>
+            <p className="test">
                 {this.props.is_fetching ? <LoadingIcon/> : `Проект с названием ${this.props.project.name}`}
             </p>
         );
