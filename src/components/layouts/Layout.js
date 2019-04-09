@@ -84,11 +84,18 @@ export default class Layout extends React.Component {
         return (
             <div className={styles.wrapper}>
                 <div className={styles.content}>
-                    <Header isMainPage={(window.location.pathname === this.state.mainPage) && this.state.isMainPage} isMobile={this.state.isMobile < 760} links={this.state.links}
-                            isActive={this.isActive} toggleActive={this.toggleActive} scrollPage={this.scrollPage}/>
+                    <Header isMainPage={(window.location.pathname === this.state.mainPage) && this.state.isMainPage}
+                            isMobile={this.state.isMobile < 760}
+                            links={this.state.links}
+                            isActive={this.isActive}
+                            toggleActive={this.toggleActive}
+                            scrollPage={this.scrollPage}
+                    />
                     <Main/>
                 </div>
-                <Footer links={this.state.links} toggleActive={this.toggleActive}/>
+                <Footer links={this.state.links}
+                        toggleActive={this.toggleActive}
+                />
             </div>
         );
     }
