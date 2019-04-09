@@ -4,7 +4,7 @@ import * as classNames from 'classnames/bind';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faAngleUp, faAngleDown} from "@fortawesome/free-solid-svg-icons";
 
-const styles = require('./Slider4blocks.css');
+const styles = require('./Slider4blocks.less');
 const cx = classNames.bind(styles);
 
 let timerSlider;
