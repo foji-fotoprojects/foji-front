@@ -8,6 +8,7 @@
   justify-content: space-between
   align-items: center
   height: 100%
+  flex-wrap: wrap
 
 .menu
   display: flex
@@ -30,8 +31,10 @@
     padding: 15px 0
 
   .content
-    flex-direction: column
-
+    flex-direction: column-reverse
+    align-items: center
+    justify-content: space-between
+    min-height: inherit
   .menu
     align-items: center
 
@@ -55,7 +58,9 @@
   .socialMenu
     order: 2
     margin-bottom: 15px
+    height: fit-content
 
   .contactsMenu
     order: 1
     margin-bottom: 15px
+    height: fit-content
